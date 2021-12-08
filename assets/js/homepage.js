@@ -36,7 +36,7 @@ var getUserRepos = function(user) {
                 displayRepos(data, user);
             });
         } else {
-            alert("Error: " + response.statusText);
+            alert("Error: Username Not Found!");
         }
     })
     .catch(function(error) {
@@ -51,7 +51,7 @@ var displayRepos = function(repos, searchTerm) {
         repoContainerEl.textContent = "No repositories found.";
         return;
     }
-    
+
     repoSearchTerm.textContent = searchTerm;
 
     // loop over repos
